@@ -1,4 +1,4 @@
-# Archoleat Repo Template
+# Next Template
 
 ![Commitlint](https://img.shields.io/github/actions/workflow/status/archoleat/next-template/commitlint.yaml?label=Commitlint)
 ![Editorconfig](https://img.shields.io/github/actions/workflow/status/archoleat/next-template/editorconfig.yaml?label=Editorconfig)
@@ -16,7 +16,7 @@
 - [Contributing](#contributing)
 - [License](#license)
 
-**Archoleat Repo Template** is a template repository designed for quickly
+**Next Template** is a template repository designed for quickly
 starting new projects with pre-configured tools and best development practices.
 
 This template includes ready-made solutions for integration with:
@@ -29,16 +29,15 @@ This template includes ready-made solutions for integration with:
 - **Pre Commit Hook**.
 - **Lint Staged**.
 - **GitHub Actions**.
-- **Semantic Release**.
 - **Bun**.
-- **Specs**.
 - **EditorConfig**.
 - **ESLint**.
 - **Remark**.
 - **Prettier**.
 - **TypeScript**.
+- **Next**.
+- **React**.
 - **Dependabot**.
-- **Welcome Bot**.
 
 ## Getting Started
 
@@ -82,20 +81,8 @@ This template includes ready-made solutions for integration with:
   > to reduce the execution time, which means it will significantly
   > reduce your costs!
 
-  - **Security**: Included **CodeQL** workflow for detecting
-    and preventing potential vulnerabilities in your code.
-
   - **Linters**: Help you maintain a consistent code writing style
     and find errors.
-
-  - **Specs**: Automated testing will help you focus on
-    writing better code!
-
-  - **Semantic Release**: For those who are tired of writing changelogs
-    and thinking about what the next version number will be.
-
-    > If you have **Branch and Tag Protection** rules configured,
-    > please read this [article](https://gonzalohirsch.com/blog/semantic-release-and-branch-protection-rules).
 
 - **TypeScript**: Pre-configured **TypeScript** setup
   for improved reliability and development convenience.
@@ -103,11 +90,12 @@ This template includes ready-made solutions for integration with:
 - **Bots**:
 
   - **Dependabot**: No more wasting time updating dependencies!
-  - **Welcome Bot**: A probot app that welcome new users.
 
 ## Scripts
 
-- `init`: Installs dependencies and **Husky**.
+- `start`: Installs dependencies and **Husky**.
+- `dev`: Run dev mode.
+- `build`: Run build mode.
 
 ## Workflows
 
@@ -140,17 +128,12 @@ This template includes ready-made solutions for integration with:
 
   > All ignore files [`.prettierignore`](.prettierignore).
 
-- [`release.yaml`](.github/workflows/release.yaml): Creates release.
-
 - [`remark.yaml`](.github/workflows/remark.yaml):
   Checks all **Markdown** files with **Remark**.
 
 - [`semantic-pull-request-title.yaml`](.github/workflows/semantic-pull-request-title.yaml):
   Validates the **Pull Request** title
   against the **conventional commits** standard.
-
-- [`spec.yaml`](.github/workflows/spec.yaml):
-  Tests all **TypeScript** files with **Bun**.
 
 - [`stale.yaml`](.github/workflows/stale.yaml):
   Removes **Issues** and **Pull Requests** that have not been active
@@ -162,11 +145,7 @@ The following files use the names **Archoleat** and **nikkeyl** by default:
 
 - [`CODEOWNERS`](.github/CODEOWNERS).
 - [`LICENSE`](LICENSE).
-- [`CHANGELOG.md`](CHANGELOG.md).
-- [`package.json`](package.json).
 - [`README.md`](README.md).
-- [`config.yml`](.github/config.yml).
-- [`release.yaml`](.github/workflows/release.yaml).
 
 Before using this template, replace this names with your
 name, name of your team or the name of your organization.

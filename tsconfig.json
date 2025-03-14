@@ -26,7 +26,7 @@
     "paths": {
       "@/config/*": ["./src/app/config/*"],
       "@/socials/*": ["./public/socials/*"],
-      "@/styles/*": ["./src/app/styles/*"],
+      "@/styles/*": ["./src/app/styles/*"]
     },
     "resolveJsonModule": true,
     // Projects
