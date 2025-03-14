@@ -1,20 +1,20 @@
-name: Spec
+name: StyleLint
 
 on:
   pull_request:
     branches:
       - main
     paths:
-      - 'src/**/*.ts'
+      - 'src/**/*.scss'
   push:
     branches:
       - main
     paths:
-      - 'src/**/*.ts'
+      - 'src/**/*.scss'
 
 jobs:
-  spec:
-    name: Spec
+  stylelint:
+    name: StyleLint
 
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -29,5 +29,5 @@ jobs:
       - name: Install Dependencies
         run: bun i
 
-      - name: Specs
-        run: bun test
+      - name: Lint
+        run: bun stylelint 'src/**/*.scss'

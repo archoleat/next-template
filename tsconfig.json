@@ -1,33 +1,52 @@
 {
   "compilerOptions": {
+    // Editor Support
+    "plugins": [
+      {
+        "name": "next"
+      },
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
+    // Emit
+    "noEmit": true,
     // Completeness
     "skipLibCheck": true,
-    // Emit
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "outDir": "",
+    // JavaScript Support
+    "allowJs": true,
     // Language and Environment
-    "lib": ["ESNext"],
+    "jsx": "preserve",
+    "lib": ["DOM.Iterable", "DOM", "ESNext"],
     "target": "ESNext",
     // Modules
     "allowImportingTsExtensions": true,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "rootDir": "src",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@/config/*": ["./src/app/config/*"],
+      "@/socials/*": ["./public/socials/*"],
+      "@/styles/*": ["./src/app/styles/*"],
+    },
+    "resolveJsonModule": true,
     // Projects
     "disableReferencedProjectLoad": true,
+    "incremental": true,
     // Type Checking
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "exactOptionalPropertyTypes": true,
     "noImplicitAny": true,
+    "noImplicitOverride": true,
     "noImplicitReturns": true,
-    "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "strict": true
+    "strict": true,
+    // Interop Constraints
+    "esModuleInterop": true,
+    "isolatedModules": true
   },
-  "exclude": ["specs"],
-  "include": ["src"]
+  "exclude": ["node_modules"],
+  "include": ["**/*.tsx", "**/*.ts", ".next/types/**/*.ts", "next-env.d.ts"]
 }

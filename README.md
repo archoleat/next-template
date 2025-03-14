@@ -1,11 +1,10 @@
 # Archoleat Repo Template
 
-![Specs](https://img.shields.io/github/actions/workflow/status/archoleat/repo-template/spec.yaml?label=Specs)
-![Commitlint](https://img.shields.io/github/actions/workflow/status/archoleat/repo-template/commitlint.yaml?label=Commitlint)
-![Editorconfig](https://img.shields.io/github/actions/workflow/status/archoleat/repo-template/editorconfig.yaml?label=Editorconfig)
-![Prettier](https://img.shields.io/github/actions/workflow/status/archoleat/repo-template/prettier.yaml?label=Prettier)
-![ESLint](https://img.shields.io/github/actions/workflow/status/archoleat/repo-template/eslint.yaml?label=ESLint)
-![Remark](https://img.shields.io/github/actions/workflow/status/archoleat/repo-template/remark.yaml?label=Remark)
+![Commitlint](https://img.shields.io/github/actions/workflow/status/archoleat/next-template/commitlint.yaml?label=Commitlint)
+![Editorconfig](https://img.shields.io/github/actions/workflow/status/archoleat/next-template/editorconfig.yaml?label=Editorconfig)
+![Prettier](https://img.shields.io/github/actions/workflow/status/archoleat/next-template/prettier.yaml?label=Prettier)
+![ESLint](https://img.shields.io/github/actions/workflow/status/archoleat/next-template/eslint.yaml?label=ESLint)
+![Remark](https://img.shields.io/github/actions/workflow/status/archoleat/next-template/remark.yaml?label=Remark)
 
 ## Table of Contents
 

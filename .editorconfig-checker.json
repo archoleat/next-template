@@ -1,7 +1,5 @@
 {
   "exclude": [
-    "config.yml",
-    "CHANGELOG.md",
     "README.md"
   ]
 }
