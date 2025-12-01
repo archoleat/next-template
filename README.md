@@ -62,7 +62,6 @@ This template includes ready-made solutions for integration with:
 
 - **Git and GitHub Integration**: Pre-configured `.gitignore`
   and `.gitattributes` for efficient work with Git and GitHub.
-
   - **Conventional Commits & Commitlint**: If you don't want
     to think about how to write a commit every time,
     these plugins will help you.
@@ -80,7 +79,6 @@ This template includes ready-made solutions for integration with:
   > **cache**, **timeout-minutes**, **paths** and **workflow run**
   > to reduce the execution time, which means it will significantly
   > reduce your costs!
-
   - **Linters**: Help you maintain a consistent code writing style
     and find errors.
 
@@ -88,7 +86,6 @@ This template includes ready-made solutions for integration with:
   for improved reliability and development convenience.
 
 - **Bots**:
-
   - **Dependabot**: No more wasting time updating dependencies!
 
 ## Scripts
