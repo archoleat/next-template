@@ -1,9 +1,8 @@
 # Directories
 public
-
-# Files
-*.md
+graphql
 
 # Ignores
 .gitignore
 .prettierignore
+.dockerignore

@@ -8,9 +8,11 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "next": "^16.0.6",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "sharp": "^0.34.3"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-share": "^5.2.2",
+    "sharp": "^0.34.5",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "@archoleat/commitlint-define-config": "^1.1.0",
@@ -27,7 +29,10 @@
     "@types/react-dom": "^19.1.7",
     "@typescript-eslint/eslint-plugin": "^8.48.0",
     "@typescript-eslint/parser": "^8.48.0",
+    "autoprefixer": "^10.4.22",
+    "baseline-browser-mapping": "^2.8.32",
     "conventional-changelog-conventionalcommits": "^9.1.0",
+    "dotenv": "^17.2.3",
     "editorconfig-checker": "^6.1.0",
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.0.6",
@@ -42,14 +47,14 @@
     "globals": "^16.3.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.5",
+    "postcss": "^8.5.6",
     "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "remark": "15.0.1",
     "remark-cli": "^12.0.1",
     "remark-preset-lint-consistent": "^6.0.1",
     "remark-preset-lint-markdown-style-guide": "^6.0.1",
     "remark-preset-lint-recommended": "^7.0.1",
-    "sass": "^1.90.0",
-    "stylelint-define-config": "^16.22.0",
-    "typescript-plugin-css-modules": "^5.2.0"
+    "tailwindcss": "^4.1.17"
   }
 }

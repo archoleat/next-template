@@ -1,4 +1,4 @@
-import '@/styles/app.scss';
+import './styles/global.css';
 
 import type { PropsWithChildren } from 'react';
 

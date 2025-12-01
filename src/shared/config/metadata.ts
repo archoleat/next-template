@@ -1,9 +1,9 @@
-import type { Metadata, Viewport } from 'next';
+import type { Metadata } from 'next';
 
 import socialCoverImage from '@/socials/cover.jpg';
 
-const title = 'site';
-const description = 'description';
+const title = '';
+const description = '';
 const images = [
   {
     url: socialCoverImage.src,
@@ -12,7 +12,7 @@ const images = [
   },
 ];
 const siteName = title;
-const siteURL = `https://${title}.vercel.app`;
+const siteURL = '';
 
 const metadata: Metadata = {
   alternates: { canonical: siteURL },
@@ -24,21 +24,11 @@ const metadata: Metadata = {
   },
   authors: {
     name: title,
-    url: `https://t.me/${title}`,
+    url: '',
   },
   creator: title,
   description,
-  keywords: [
-    'about-me',
-    'freelance',
-    'front-end',
-    'full-time',
-    'herd-skills',
-    'part-time',
-    'portfolio',
-    'soft-skills',
-    title,
-  ],
+  keywords: [],
   metadataBase: new URL(siteURL),
   robots: {
     index: true,
@@ -46,7 +36,7 @@ const metadata: Metadata = {
   },
   referrer: 'origin',
   title,
-  manifest: 'manifest.webmanifest',
+  manifest: '/manifest.webmanifest',
   openGraph: {
     description,
     url: siteURL,
@@ -67,26 +57,21 @@ const metadata: Metadata = {
       fetchPriority: 'high',
       sizes: '180x180',
       type: 'image/png',
-      url: 'favicons/apple-touch-icon.png',
+      url: '/favicons/apple-touch-icon.png',
     },
     icon: {
       fetchPriority: 'high',
       sizes: '48x48',
       type: 'image/x-icon',
-      url: 'favicon.ico',
+      url: '/favicon.ico',
     },
     other: {
       fetchPriority: 'high',
       sizes: 'any',
       type: 'image/svg+xml',
-      url: 'favicons/icon.svg',
+      url: '/favicons/icon.svg',
     },
   },
 };
 
-const viewport: Viewport = {
-  colorScheme: 'dark',
-  themeColor: 'black',
-};
-
-export { metadata, viewport };
+export { metadata };
