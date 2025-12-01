@@ -12,5 +12,5 @@ const RootLayout = async (properties: PropsWithChildren) => {
   );
 };
 
-export { metadata, viewport } from '@/config/metadata';
+export { metadata } from '@/config/metadata';
 export default RootLayout;

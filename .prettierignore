@@ -6,3 +6,6 @@ graphql
 .gitignore
 .prettierignore
 .dockerignore
+
+# Files
+.md
