@@ -1,11 +1,10 @@
 import { defineFlatConfig } from 'eslint-define-config';
+import { fixupPluginRules } from '@eslint/compat';
 import eslintPluginReactHooksPlugin from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 import importPlugin from 'eslint-plugin-import';
 import importSortPlugin from 'eslint-plugin-simple-import-sort';
 import nextPlugin from '@next/eslint-plugin-next';
-import nextTypeScript from 'eslint-config-next/typescript';
-import nextVitals from 'eslint-config-next/core-web-vitals';
 import prettierConfig from 'eslint-config-prettier';
 import reactPlugin from 'eslint-plugin-react';
 import sortDestructureKeysPlugin from 'eslint-plugin-sort-destructure-keys';
@@ -14,9 +13,9 @@ import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 import unicornPlugin from 'eslint-plugin-unicorn';
 
 export default defineFlatConfig([
-  ...nextTypeScript,
-  ...nextVitals,
   {
+    ...nextPlugin.configs['core-web-vitals'],
+    ...nextPlugin.configs['recommended'],
     files: ['src/**/*.tsx', 'src/**/*.ts'],
     languageOptions: {
       parser: typeScriptParser,
@@ -41,12 +40,12 @@ export default defineFlatConfig([
     },
     plugins: {
       '@typescript-eslint': typescriptPlugin,
-      'react-hooks': eslintPluginReactHooksPlugin,
+      'react-hooks': fixupPluginRules(eslintPluginReactHooksPlugin),
       'simple-import-sort': importSortPlugin,
       'sort-destructure-keys': sortDestructureKeysPlugin,
-      import: importPlugin,
-      next: nextPlugin,
-      react: reactPlugin,
+      import: fixupPluginRules(importPlugin),
+      next: fixupPluginRules(nextPlugin),
+      react: fixupPluginRules(reactPlugin),
       unicorn: unicornPlugin,
     },
     rules: {
