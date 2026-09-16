@@ -8,4 +8,5 @@ graphql
 .dockerignore
 
 # Files
-.md
+bun.lock
+*.md

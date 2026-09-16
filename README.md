@@ -5,6 +5,7 @@
 ![Prettier](https://img.shields.io/github/actions/workflow/status/archoleat/next-template/prettier.yaml?label=Prettier)
 ![ESLint](https://img.shields.io/github/actions/workflow/status/archoleat/next-template/eslint.yaml?label=ESLint)
 ![Remark](https://img.shields.io/github/actions/workflow/status/archoleat/next-template/remark.yaml?label=Remark)
+![Build](https://img.shields.io/github/actions/workflow/status/archoleat/next-template/build.yaml?label=Build)
 
 ## Table of Contents
 
@@ -73,7 +74,7 @@ This template includes ready-made solutions for integration with:
     bad code to the repository!
 
 - **Continuous Integration (CI)**: Built-in CI support using GitHub Actions
-  for automatic linting, testing and building of your code with each change.
+  for automatic linting and building of your code with each change.
 
   > Also suitable for private repositories! GitHub Actions use
   > **cache**, **timeout-minutes**, **paths** and **workflow run**
@@ -90,9 +91,11 @@ This template includes ready-made solutions for integration with:
 
 ## Scripts
 
-- `start`: Installs dependencies and **Husky**.
+- `init`: Installs dependencies and **Husky**.
 - `dev`: Run dev mode.
 - `build`: Run build mode.
+- `eslint:fix`: Fix ESLint errors.
+- `prettier:fix`: Format files with Prettier.
 
 ## Workflows
 
@@ -102,6 +105,10 @@ This template includes ready-made solutions for integration with:
 - [`commitlint.yaml`](.github/workflows/commitlint.yaml):
   Checks the commit message according
   to the **Conventional Commits** standard.
+
+- [`build.yaml`](.github/workflows/build.yaml):
+  Builds and pushes the Docker image to GitHub Container Registry
+  on changes to the application or its build configuration.
 
 - [`create-pull-request.yaml`](.github/workflows/create-pull-request.yaml):
   Automatically creates a **Pull Request**
@@ -113,7 +120,7 @@ This template includes ready-made solutions for integration with:
   > All ignore files [`.editorconfig-checker.json`](.editorconfig-checker.json).
 
 - [`eslint.yaml`](.github/workflows/eslint.yaml):
-  Checks all **TypeScript** files with **ESLint**.
+  Checks all **TypeScript** and **TSX** files with **ESLint**.
 
   > All ignore files [`.remarkignore`](.remarkignore).
 

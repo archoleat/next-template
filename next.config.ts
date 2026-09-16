@@ -7,12 +7,5 @@ export default defineConfig({
   },
   images: {
     formats: ['image/webp'],
-    remotePatterns: [
-      {
-        hostname: '',
-        pathname: '/**',
-        protocol: 'https',
-      },
-    ],
   },
 });

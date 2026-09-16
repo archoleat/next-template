@@ -3,5 +3,5 @@
 node_modules
 
 # Files
-bun.lock
+.env
 next-env.d.ts

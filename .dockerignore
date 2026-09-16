@@ -1,0 +1,18 @@
+# Node.js
+node_modules
+.next
+.env
+
+# Version Control
+.git/
+.gitattributes
+.gitignore
+
+# Services
+.github
+.husky
+
+# Docker
+Dockerfile
+docker-compose.yaml
+.dockerignore

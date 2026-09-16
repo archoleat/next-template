@@ -8,6 +8,7 @@ import nextPlugin from '@next/eslint-plugin-next';
 import prettierConfig from 'eslint-config-prettier';
 import reactPlugin from 'eslint-plugin-react';
 import sortDestructureKeysPlugin from 'eslint-plugin-sort-destructure-keys';
+import tailwindCanonicalClasses from 'eslint-plugin-tailwind-canonical-classes';
 import typeScriptParser from '@typescript-eslint/parser';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 import unicornPlugin from 'eslint-plugin-unicorn';
@@ -16,6 +17,7 @@ export default defineFlatConfig([
   {
     ...nextPlugin.configs['core-web-vitals'],
     ...nextPlugin.configs['recommended'],
+    ...tailwindCanonicalClasses.configs['next/recommended'],
     files: ['src/**/*.tsx', 'src/**/*.ts'],
     languageOptions: {
       parser: typeScriptParser,
@@ -43,6 +45,7 @@ export default defineFlatConfig([
       'react-hooks': fixupPluginRules(eslintPluginReactHooksPlugin),
       'simple-import-sort': importSortPlugin,
       'sort-destructure-keys': sortDestructureKeysPlugin,
+      'tailwind-canonical-classes': tailwindCanonicalClasses,
       import: fixupPluginRules(importPlugin),
       next: fixupPluginRules(nextPlugin),
       react: fixupPluginRules(reactPlugin),
@@ -55,10 +58,15 @@ export default defineFlatConfig([
         {
           selector: 'variableLike',
           format: ['snake_case', 'camelCase', 'PascalCase', 'UPPER_CASE'],
+          filter: {
+            regex: '^_',
+            match: false,
+          },
         },
       ],
       '@typescript-eslint/no-explicit-any': 'error',
       'comma-dangle': ['warn', 'only-multiline'],
+      'object-shorthand': ['warn', 'always'],
       'import/default': 'error',
       'import/export': 'error',
       'import/named': 'error',
@@ -86,6 +94,12 @@ export default defineFlatConfig([
       'simple-import-sort/exports': 'error',
       'simple-import-sort/imports': 'warn',
       'sort-destructure-keys/sort-destructure-keys': 'warn',
+      'tailwind-canonical-classes/tailwind-canonical-classes': [
+        'warn',
+        {
+          cssPath: './src/app/styles/global.css',
+        },
+      ],
       'unicorn/no-unused-properties': 'warn',
       'unicorn/string-content': 'warn',
     },

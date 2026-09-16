@@ -1,9 +1,11 @@
 {
   "type": "module",
   "scripts": {
-    "start": "bun i && husky",
+    "init": "bun i && husky",
     "dev": "next dev --turbo",
-    "build": "next build"
+    "build": "next build",
+    "eslint:fix": "eslint src --ext .ts,.tsx --fix",
+    "prettier:fix": "prettier . --write"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -18,12 +20,12 @@
     "@archoleat/commitlint-define-config": "^1.1.2",
     "@archoleat/next-define-config": "^1.2.7",
     "@archoleat/prettier-define-config": "^1.2.2",
-    "@archoleat/stylelint-config-extended-scss": "^1.11.4",
     "@commitlint/cli": "^21.2.0",
     "@commitlint/config-conventional": "^21.2.0",
     "@commitlint/types": "^21.2.0",
     "@eslint/compat": "^2.1.0",
     "@next/eslint-plugin-next": "^16.2.10",
+    "@tailwindcss/postcss": "^4.3.2",
     "@types/bun": "^1.3.14",
     "@types/node": "^26.1.0",
     "@types/react": "^19.2.17",
@@ -44,6 +46,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-simple-import-sort": "^13.0.0",
     "eslint-plugin-sort-destructure-keys": "^3.0.0",
+    "eslint-plugin-tailwind-canonical-classes": "^1.3.3",
     "eslint-plugin-unicorn": "^70.0.0",
     "globals": "^17.7.0",
     "husky": "^9.1.7",

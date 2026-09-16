@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 
 import socialCoverImage from '@/socials/cover.jpg';
 
-const title = '';
-const description = '';
+const title = 'Next Template';
+const description = 'Next.js application template';
+const siteURL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
 const images = [
   {
     url: socialCoverImage.src,
@@ -12,7 +13,6 @@ const images = [
   },
 ];
 const siteName = title;
-const siteURL = '';
 
 const metadata: Metadata = {
   alternates: { canonical: siteURL },
@@ -24,7 +24,7 @@ const metadata: Metadata = {
   },
   authors: {
     name: title,
-    url: '',
+    url: siteURL,
   },
   creator: title,
   description,
