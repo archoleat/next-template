@@ -42,19 +42,55 @@ This template includes ready-made solutions for integration with:
 
 ## Getting Started
 
-1. **Create a Repository**: Use this template
-   to create a new repository on GitHub.
+Install Bun and Git, then create a repository with **Use this template**.
+Replace `YOUR_OWNER` and `YOUR_REPOSITORY` below with your repository's names.
 
-   > Since this is a **Public Template** you can click the button
-   > **Use this template** for a faster and more convenient cloning.
+```shell
+git clone git@github.com:YOUR_OWNER/YOUR_REPOSITORY.git my-app
 
-1. **Clone the Repository**: Clone your new repository to your local machine.
+cd my-app
 
-1. **Start Development**: Develop your project,
-   making changes according to your project's needs.
+bun run init
+bun dev
+```
 
-1. **Configure GitHub Actions**: Modify GitHub Actions
-   settings to fit your requirements.
+`init` installs dependencies and enables Husky hooks. The development server
+listens on port 3000.
+
+Before publishing your application:
+
+- Update the title, description, authors, and social metadata in
+  [`src/shared/config/metadata.ts`](src/shared/config/metadata.ts).
+
+- Replace [`public/socials/cover.jpg`](public/socials/cover.jpg).
+
+- Set `NEXT_PUBLIC_SITE_URL` in your deployment environment or a local `.env`
+  file. It controls canonical and social URLs; the default is
+  `http://localhost:3000`.
+
+- Update the repository badges in this README and the maintainer files listed
+  under [Change of Maintainer](#change-of-maintainer).
+
+Build the application locally with:
+
+```shell
+bun run build
+```
+
+[`next.config.ts`](next.config.ts) enables standalone output. The Dockerfile
+copies the standalone server, static assets, and public files into its image:
+
+```shell
+docker build -t my-app .
+docker run --rm -p 3000:3000 my-app
+```
+
+The `Build` workflow publishes `ghcr.io/<owner>/<repository>` with a short
+commit tag and `latest`. It uses the automatic `GITHUB_TOKEN` with
+`packages: write`; no separate registry secret is configured.
+
+Enable Pull requests and auto-merge if you keep the automatic PR and Dependabot
+merge workflows. Review required check names against the existing jobs.
 
 ## Features
 
@@ -150,12 +186,14 @@ The following files use the names **Archoleat** and **nikkeyl** by default:
 - [`CODEOWNERS`](.github/CODEOWNERS).
 - [`LICENSE`](LICENSE).
 - [`README.md`](README.md).
+- [`package.json`](package.json), when adding package metadata.
+- [`metadata.ts`](src/shared/config/metadata.ts).
 
-Before using this template, replace this names with your
+Before using this template, replace these names with your
 name, name of your team or the name of your organization.
 
-> \[!CAUTION]
-> Don't forget to change your license!
+> [!CAUTION]
+> Review `LICENSE` and copyright notices before publishing your project.
 
 ## Contributing
 
