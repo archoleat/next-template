@@ -1,4 +1,6 @@
-FROM oven/bun:1.3.10-alpine AS base
+FROM node:lts-alpine AS base
+
+COPY --from=oven/bun:1.4.4-alpine /usr/local/bin/bun /usr/local/bin/bun
 
 WORKDIR /usr/src/app
 
@@ -23,7 +25,7 @@ WORKDIR /usr/src/app
 
 ENV NEXT_TELEMETRY_DISABLED=1
 
-USER bun
+USER node
 
 COPY --from=builder /usr/src/app/.next/standalone ./
 COPY --from=builder /usr/src/app/.next/static ./.next/static
@@ -31,4 +33,4 @@ COPY --from=builder /usr/src/app/public ./public
 
 EXPOSE 3000
 
-CMD ["bun", "server.js"]
+CMD ["node", "server.js"]

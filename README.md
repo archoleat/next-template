@@ -78,7 +78,8 @@ bun run build
 ```
 
 [`next.config.ts`](next.config.ts) enables standalone output. The Dockerfile
-copies the standalone server, static assets, and public files into its image:
+uses Node.js LTS to build and run the standalone server. Bun installs
+dependencies; static assets and public files are included in the image:
 
 ```shell
 docker build -t my-app .
