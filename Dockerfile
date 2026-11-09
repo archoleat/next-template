@@ -17,6 +17,8 @@ COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED=1
 
+RUN node specs/dependency-security.mjs
+
 RUN bun run build
 
 FROM base AS runner

@@ -10,6 +10,8 @@ on:
     paths:
       - 'next.config.*'
       - 'package.json'
+      - 'patches/**'
+      - 'specs/**'
       - 'public/**'
       - 'src/**'
       - 'Dockerfile*'
@@ -58,6 +60,8 @@ jobs:
           if git diff --quiet "$BASE_SHA...$HEAD_SHA" -- \
               ':(glob)next.config.*' \
               ':(glob)package.json' \
+              ':(glob)patches/**' \
+              ':(glob)specs/**' \
               ':(glob)public/**' \
               ':(glob)src/**' \
               ':(glob)Dockerfile*' \

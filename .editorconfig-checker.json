@@ -1,3 +1,8 @@
 {
-  "exclude": ["README.md", "bun.lock", "semantic-pull-request-title.yaml"]
+  "exclude": [
+    "README.md",
+    "bun.lock",
+    "semantic-pull-request-title.yaml",
+    "patches/"
+  ]
 }
