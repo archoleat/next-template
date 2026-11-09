@@ -12,6 +12,18 @@ on:
       - 'package.json'
       - 'public/**'
       - 'src/**'
+      - 'Dockerfile*'
+      - '.dockerignore'
+      - 'bun.lock*'
+      - 'bunfig.toml'
+      - 'tsconfig*.json'
+      - 'next-env.d.ts'
+      - '*.config.*'
+      - '.npmrc'
+      - '.bun-version'
+      - '.node-version'
+      - '.nvmrc'
+      - '.github/workflows/build.yaml'
 
 permissions:
   contents: read
@@ -47,7 +59,19 @@ jobs:
               ':(glob)next.config.*' \
               ':(glob)package.json' \
               ':(glob)public/**' \
-              ':(glob)src/**'; then
+              ':(glob)src/**' \
+              ':(glob)Dockerfile*' \
+              ':(glob).dockerignore' \
+              ':(glob)bun.lock*' \
+              ':(glob)bunfig.toml' \
+              ':(glob)tsconfig*.json' \
+              ':(glob)next-env.d.ts' \
+              ':(glob)*.config.*' \
+              ':(glob).npmrc' \
+              ':(glob).bun-version' \
+              ':(glob).node-version' \
+              ':(glob).nvmrc' \
+              ':(glob).github/workflows/build.yaml'; then
             echo 'run=false' >> "$GITHUB_OUTPUT"
           else
             status=$?
